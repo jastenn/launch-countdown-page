@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div :aria-label="label" class="timers">
+    <div class="timers">
+      <span class="sr-only">countdown until {{ label }}</span>
       <CountdownTimerCard label="days" :value="time.days" />
       <CountdownTimerCard label="hours" :value="time.hours" />
       <CountdownTimerCard label="minutes" :value="time.minutes" />

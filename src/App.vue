@@ -66,6 +66,23 @@ body {
   height: 100vh;
 }
 
+.sr-only {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  opacity: 0;
+  pointer-events: none; */
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  top: auto;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .app {
   width: 87%;
   max-width: 42.94rem;

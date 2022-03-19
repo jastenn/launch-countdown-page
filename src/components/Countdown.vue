@@ -1,8 +1,8 @@
 <template>
-  <main class="container">
+  <div class="container">
     <h1 class="heading">{{ title }}</h1>
     <CountdownTimer :label="readableLaunchDate" :time="diff" />
-  </main>
+  </div>
 </template>
 
 <script lang="ts" setup>
