@@ -44,4 +44,24 @@ onUnmounted(() => {
   text-align: center;
   margin-bottom: 3.4375rem;
 }
+
+@media (min-width: 500px) {
+  .heading {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 700px) {
+
+  .heading {
+    font-size: 1.38rem; 
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .heading {
+    margin-bottom: 6.5rem;
+  }
+}
 </style>
