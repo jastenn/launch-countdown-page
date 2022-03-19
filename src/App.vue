@@ -1,15 +1,18 @@
+<template>
+  <div class="app">
+    <Countdown :launch-date="launchDate" title="We're launching soon" />
+    <SocialLinks class="social-links" />
+  </div>
+</template>
+
 <script setup lang="ts">
 import Countdown from './components/Countdown.vue';
 import SocialLinks from './components/SocialLinks.vue';
+import { DateTime } from 'luxon'
 
+const launchDate = DateTime.now().plus({ days: 14 })
 </script>
 
-<template>
-  <div class="app">
-    <Countdown title="We're launching soon" />
-    <SocialLinks />
-  </div>
-</template>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
@@ -17,11 +20,14 @@ import SocialLinks from './components/SocialLinks.vue';
 :root {
   --primary-grayish-blue: hsl(237, 18%, 59%);
   --primary-soft-red: hsl(345, 95%, 68%);
-
   --neutral-white: hsl(0, 0%, 100%);
+
   --neutral-dark-blue-1: hsl(236, 21%, 26%);
   --neutral-dark-blue-2: hsl(235, 16%, 14%);
   --neutral-dark-blue-3: hsl(234, 17%, 12%);
+
+  --card-bg-upper: hsl(245, 23%, 22%);
+  --card-bg-lower: hsl(235, 19%, 25%);
 }
 
 *,
@@ -37,6 +43,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-family: 'Red Hat Text', sans-serif;
   color: var(--neutral-white);
   font-size: .875rem;
@@ -47,10 +54,22 @@ body {
   background-position: bottom left, center;
   background-position: bottom left -5rem, center;
   background-size: 70rem, cover;
+  position: relative;
   min-height: 100vh;
 }
 
 .app {
+  width: 87%;
+  max-width: 42.94rem;
+  margin: 0 auto;
   padding-top: 8.875rem;
 }
+
+.social-links {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 </style>
