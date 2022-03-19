@@ -57,6 +57,10 @@ const socialLinks: SocialLink[] = [
   transition: fill 200ms ease-out;
 }
 
+.social-link {
+  outline: none;
+}
+
 .social-link:hover .icon > *,
 .social-link:focus .icon > *{
   fill: var(--primary-soft-red);

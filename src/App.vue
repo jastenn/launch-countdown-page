@@ -62,7 +62,8 @@ body {
   background-position: bottom left -5rem, center;
   background-size: 70rem, cover;
   position: relative;
-  min-height: 100vh;
+  min-height: 31.25rem;
+  height: 100vh;
 }
 
 .app {

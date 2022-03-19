@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div aria-hidden="true" class="container">
     <div class="digit" :data-digit-before="formatNumber(value + 1)" :data-digit-after="formatNumber(value)">
       <!-- before -->
       <div class="card" ref="card">
