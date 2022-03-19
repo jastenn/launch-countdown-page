@@ -61,7 +61,7 @@ const resetAnimation = (el: HTMLElement) => {
   height: var(--container-height);
   width: 4.375rem;
   border-radius: var(--radius);
-  box-shadow: 0 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 0 3px 0px rgba(0, 0, 0, .5);
 }
 
 .label {
@@ -164,7 +164,7 @@ const resetAnimation = (el: HTMLElement) => {
 }
 
 .card-face-back > span {
-  transform: translateY(-50%);
+  transform: translateY(-52%);
   display: block;
 }
 
@@ -174,5 +174,50 @@ const resetAnimation = (el: HTMLElement) => {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+}
+
+@media (min-width: 500px) {
+  .container {
+    --container-height: 5.5rem;
+    font-size: 3.13rem;
+    width: 5.88rem;
+    box-shadow: 0 4px 0px rgba(0, 0, 0, .5);
+  }
+
+  .label {
+    font-size: .565rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    --container-height: 7.38rem;
+    font-size: 4rem;
+    width: 7.88rem;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, .5);
+  }
+
+  .label {
+    font-size: .625rem;
+    margin-top: 1.25rem;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    --container-height: 8.63rem;
+    width: 9.25rem;
+    font-size: 4.88rem;
+    box-shadow: 0 7px 0px rgba(0, 0, 0, .5);
+  }
+
+  .label {
+    font-size: .875rem;
+    margin-top: 1.63rem;
+    
+  }
+  .card-face-back > span {
+    transform: translateY(-50%);    
+  }
 }
 </style>

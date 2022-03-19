@@ -1,12 +1,19 @@
 <template>
   <div class="app">
-    <Countdown :launch-date="launchDate" title="We're launching soon" />
-    <SocialLinks class="social-links" />
+    <main>
+      <Countdown :launch-date="launchDate" title="We're launching soon" />
+    </main>
+
+    <footer class="footer">
+      <SocialLinks class="socials" />
+      <Attribution />
+    </footer>
   </div>
 </template>
 
 <script setup lang="ts">
 import Countdown from './components/Countdown.vue';
+import Attribution from './components/Attribution.vue';
 import SocialLinks from './components/SocialLinks.vue';
 import { DateTime } from 'luxon'
 
@@ -65,11 +72,21 @@ body {
   padding-top: 8.875rem;
 }
 
-.social-links {
+.footer {
+  color: var(--primary-grayish-blue);
   position: absolute;
   bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.footer .socials {
+  margin-bottom: 1rem;
+}
+@media (min-width: 800px) {
+  body {
+    background-position: bottom, center;
+    background-size: contain, cover;
+  }
+}
 </style>
